@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Inter Variable", sans-serif;
+  /* "Poppin", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", */
+  /* "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+
+  /*1 should be base color, each number is a shade theme dictates if its ligher or darker*/
+  /* neutrals */
+  --color-primary-3: var(--theme-color-primary-3);
+  --color-primary-2: var(--theme-color-primary-2);
+  --color-primary-1: var(--theme-color-primary-1);
+
+  --color-primary-alt-1: var(--theme-color-primary-alt-1);
+
+  --color-opposing-2: var(--theme-color-opposing-2);
+  --color-opposing-1: var(--theme-color-opposing-1);
+
+  --color-outline-1: var(--theme-color-outline-1);
+  --color-outline-2: var(--theme-color-outline-2);
+
+  /* actual colors non neutrals */
+  --color-accent-1: var(--theme-color-accent-1);
+
+  /* behavior based non neutrals */
+  --color-error-1: var(--theme-color-error-1);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
+
+@layer base {
+  [data-theme="light"] {
+    /* --theme-color-primary-3: oklch(0.54 0 0); */
+    --theme-color-primary-3: oklch(0.72 0 0);
+    --theme-color-primary-2: oklch(0.82 0 0);
+    /*lightest*/
+    --theme-color-primary-1: oklch(0.90 0 0);
+
+    /* --theme-color-primary-alt-3: oklch(0.90 0 0); */
+    /* --theme-color-primary-alt-2: oklch(0.90 0 0); */
+    --theme-color-primary-alt-1: oklch(0.86 0 0);
+
+    --theme-color-opposing-2: oklch(0.54 0 0);
+    /*darkest*/
+    --theme-color-opposing-1: oklch(0.27 0 0);
+
+    --theme-color-outline-2: oklch(0.54 0 0);
+    --theme-color-outline-1: oklch(0.63 0 0);
+
+    /* non-neutrals */
+    --theme-color-accent-1: oklch(0.54 0.12 260);
+    
+    --theme-color-error-1: oklch(0.49 0.1 19);
+  }
+
+  [data-theme="dark"] {
+    /* darkest and lightest must contrast*/
+
+    /* neutrals */
+    --theme-color-primary-3: oklch(0.54 0 0);
+    --theme-color-primary-2: oklch(0.36 0 0);
+    /*darkest*/
+    --theme-color-primary-1: oklch(0.18 0 0);
+
+    --theme-color-primary-alt-1: oklch(0.24 0 0);
+
+    --theme-color-opposing-2: oklch(0.72 0 0);
+    /*lightest*/
+    --theme-color-opposing-1: oklch(0.90 0 0);
+
+    --theme-color-outline-2: oklch(0.27 0 0);
+    --theme-color-outline-1: oklch(0.36 0 0);
+  
+    /* non-neutrals */
+    --theme-color-accent-1: oklch(0.54 0.12 260);
+
+    --theme-color-error-1: oklch(0.39 0.1 19);
+  }
+}
