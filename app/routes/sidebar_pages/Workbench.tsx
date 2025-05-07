@@ -4,6 +4,7 @@ import Button from "~/components/ui/Button";
 import Divider from "~/components/ui/Divider";
 import Input from "~/components/ui/Input";
 import Modal from "~/components/ui/Modal";
+import TestForm from "../forms/TestForm";
 
 export const meta: MetaFunction = () => {
   return [
@@ -62,17 +63,10 @@ export default function Workbench() {
           <div>This is the modal info ?????</div>
         </Modal>
       </div>
-      <form target="/" className="flex flex-col gap-4">
-        <Input placeholder="text" min={1} />
-        <Input
-          placeholder="number"
-          type="number"
-          max={10}
-          min={1}
-          defaultValue={5}
-        />
-        <Button type="submit">Submit</Button>
-      </form>
+      <div className="flex flex-col items-center">
+        <span>Form</span>
+        <TestForm />
+      </div>
       <Divider className="w-1/3" />
       <h2 className="">Colors</h2>
       <div className="flex flex-row flex-wrap justify-center gap-2">

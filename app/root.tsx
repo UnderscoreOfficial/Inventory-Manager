@@ -47,7 +47,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       lang="en"
       className="bg-primary-1 text-opposing-1 font-sans transition-colors
         duration-300"
-      data-theme="light"
+      data-theme="dark"
     >
       <head>
         <meta charSet="utf-8" />

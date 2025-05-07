@@ -54,7 +54,7 @@ export default function Input({
 }: Props) {
   return (
     // field type for text based inputs
-    <Field.Root className="flex w-fit flex-col gap-1">
+    <Field.Root className="flex flex-col gap-1">
       {label && <Field.Label>{label}</Field.Label>}
       {type == "number" ? (
         <NumberInput.Root className="relative">
